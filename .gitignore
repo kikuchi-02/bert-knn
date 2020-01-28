@@ -1,0 +1,4 @@
+dataset/*
+bert/*
+encoded.csv
+.python-version
