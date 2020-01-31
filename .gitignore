@@ -3,3 +3,4 @@ bert/*
 encoded.csv
 .python-version
 __pycache__
+.ipynb_checkpoints
