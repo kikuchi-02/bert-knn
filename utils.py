@@ -4,7 +4,7 @@ import pandas as pd
 import nmslib
 import os
 import time
-import sentencepiece as spm
+from pyknp import Juman
 
 def read_data(csv_file_name: str) -> pd.DataFrame:
     dot_index = csv_file_name.find('.')
@@ -16,15 +16,12 @@ def read_data(csv_file_name: str) -> pd.DataFrame:
         return None
     return df
 
-def to_piece():
-    s = spm.SentencePieceProcessor()
-    s.Load('./bert/jp/Japanese_L-12_H-768_A-12_E-30_BPE_WWM/wiki-ja.model')
 
-def bert_encode(text_list: list) -> list:
+def bert_encode(text_list: list, is_tokenized=False) -> list:
     print('start encoding')
     start = time.time()
     bc = BertClient()
-    vec_list = bc.encode(text_list)
+    vec_list = bc.encode(text_list, is_tokenized)
     end = time.time()
     print('finish encoding')
     print(end-start)
