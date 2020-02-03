@@ -52,6 +52,7 @@ mccabe==0.6.1
 mistune==0.8.4
 nbconvert==5.6.1
 nbformat==5.0.4
+nltk==3.4.5
 nmslib==2.0.5
 notebook==6.0.3
 numpy==1.18.1
@@ -86,8 +87,10 @@ requests-oauthlib==1.3.0
 rsa==4.0
 s3transfer==0.3.2
 sacremoses==0.0.38
+scikit-learn==0.22.1
 scipy==1.4.1
 Send2Trash==1.5.0
+-e git+https://github.com/UKPLab/sentence-transformers.git@a96ccd3f2a6c031a33a929bbc5f110831f3a9f15#egg=sentence_transformers
 sentencepiece==0.1.85
 six==1.14.0
 tensorboard==1.15.0
